@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Place } from '../../place.model';
+import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { PlacesService } from '../../places.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-offer-bookings',
@@ -20,7 +20,7 @@ export class OfferBookingsPage implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
-      if(!paramMap.has('placeId')){
+      if(!paramMap.has('placeId')) {
         this.navCtrl.navigateBack('/places/tabs/offers');
         return;
       }

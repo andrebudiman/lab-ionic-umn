@@ -9,17 +9,16 @@ import { ModalController } from '@ionic/angular';
 })
 export class CreateBookingComponent implements OnInit {
   @Input() selectedPlace: Place;
-
-  constructor(private modalCtrl: ModalController) { }
+  
+  constructor(private modalCtrl: ModalController) {}
 
   ngOnInit() {}
 
-  onCancel(){
+  onCancel() {
     this.modalCtrl.dismiss(null, 'cancel');
   }
 
-  onBookPlace(){
-    this.modalCtrl.dismiss({message: 'This is dummy message'}, 'confirm');
+  onBookPlace() {
+    this.modalCtrl.dismiss({message: 'This is a dummy message!'}, 'confirm');
   }
-
 }
